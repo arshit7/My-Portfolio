@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Arshit Thakur | Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --purple: #a78bfa;
+    --light: #c4b5fd;
+    --bg: #090812;
+    --card: #151321;
+    --text: #ffffff;
+    --grey: #aaa5b7;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: rgba(15, 13, 27, 0.95);
+    border-bottom: 1px solid #29233c;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--purple);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--purple);
+}
+
+section {
+    padding: 85px 10%;
+}
+
+.home {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.home-content {
+    max-width: 650px;
+    animation: slideUp 1s ease;
+}
+
+.home h3 {
+    color: var(--purple);
+    font-size: 19px;
+}
+
+.home h1 {
+    font-size: clamp(42px, 7vw, 65px);
+    margin: 10px 0;
+}
+
+.home h2 {
+    color: var(--light);
+    font-size: 25px;
+}
+
+.home p {
+    color: var(--grey);
+    margin: 20px 0;
+    max-width: 550px;
+}
+
+.highlight {
+    color: var(--purple);
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 11px 23px;
+    background: var(--purple);
+    color: #100b1d;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-4px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--purple);
+    color: var(--purple);
+}
+
+.profile-box {
+    width: 280px;
+    height: 280px;
+    min-width: 220px;
+    border: 3px solid var(--purple);
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 35px #a78bfa55;
+    animation: float 3s ease-in-out infinite;
+}
+
+.profile-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heading {
+    color: var(--purple);
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+
+.about p {
+    color: var(--grey);
+    max-width: 850px;
+}
+
+.skills-container,
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid #302844;
+    border-radius: 12px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: var(--purple);
+    box-shadow: 0 0 20px #a78bfa22;
+}
+
+.card h3 {
+    color: var(--light);
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: var(--grey);
+    font-size: 14px;
+}
+
+.tags {
+    margin-top: 12px;
+    color: var(--purple);
+    font-size: 12px;
+}
+
+.contact p {
+    color: var(--grey);
+    margin: 12px 0;
+}
+
+.contact a {
+    color: var(--purple);
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #13101e;
+    color: var(--grey);
+    font-size: 13px;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width: 750px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .profile-box {
+        width: 210px;
+        height: 210px;
+    }
+
+    section {
+        padding: 65px 7%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ARSHIT.</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+
+<section class="home" id="home">
+
+    <div class="home-content">
+
+        <h3>Hello, I'm</h3>
+
+        <h1>Arshit <span class="highlight">Thakur</span></h1>
+
+        <h2>Computer Science & AI Student</h2>
+
+        <p>
+            I am a B.Tech Computer Science student specializing
+            in Artificial Intelligence and Machine Learning.
+            I am passionate about programming, technology,
+            web development and building innovative solutions.
+        </p>
+
+        <div class="buttons">
+            <a href="Resume/Arshit_Thakur_Resume.pdf"
+   class="btn"
+   download>
+   Download Resume
+</a>
+            <a href="#projects" class="btn">
+                View Projects
+            </a>
+
+            <a href="https://github.com/arshit7"
+               target="_blank" class="btn btn-outline">
+                GitHub Profile
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="profile-box">
+        <img src="./images/profile.jpg" alt="Arshit Thakur">
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <h2 class="heading">About Me</h2>
+
+    <p>
+        I am pursuing B.Tech in Computer Science and Engineering
+        with a specialization in Artificial Intelligence and
+        Machine Learning at Shoolini University of Biotechnology
+        and Management Sciences.
+
+        I enjoy learning programming languages, exploring
+        emerging technologies and developing practical projects.
+
+        My goal is to become a skilled developer and continuously
+        improve my technical knowledge.
+    </p>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+    <h2 class="heading">My Skills</h2>
+
+    <div class="skills-container">
+
+        <div class="card">
+            <h3>Programming</h3>
+            <p>Python, C++, JavaScript</p>
+        </div>
+
+        <div class="card">
+            <h3>Web Development</h3>
+            <p>HTML, CSS, JavaScript, Node.js</p>
+        </div>
+
+        <div class="card">
+            <h3>AI & Machine Learning</h3>
+            <p>Machine Learning Basics, NumPy, Pandas</p>
+        </div>
+
+        <div class="card">
+            <h3>Database & Tools</h3>
+            <p>MongoDB, SQL, Git, GitHub, VS Code</p>
+        </div>
+
+        <div class="card">
+            <h3>Cloud Computing</h3>
+            <p>Microsoft Azure Fundamentals (AZ-900)</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <h2 class="heading">My Projects</h2>
+
+    <div class="projects-container">
+
+        
+<div class="card">
+    <h3>E-commerce Website</h3>
+
+    <p>
+        A web-based shopping application with
+        backend functionality, user authentication
+        and product management.
+    </p>
+
+    <div class="tags">
+        HTML | CSS | JavaScript | Node.js | MongoDB
+    </div>
+
+    <br>
+
+    <a href="https://github.com/arshit7"
+       target="_blank"
+       class="btn">
+       View on GitHub
+    </a>
+</div>
+
+        <div class="card">
+            <h3>HR Analytics</h3>
+            <p>
+                A data analytics project focused on
+                exploring employee data and identifying
+                useful workforce insights.
+            </p>
+            <div class="tags">
+                Python | Data<h3>E-commerce Website</h3> Analysis
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Diabetes Prediction</h3>
+            <p>
+                A machine learning project focused
+                on predicting diabetes using
+                relevant health data.
+            </p>
+            <div class="tags">
+                Python | Machine Learning
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Street Sign Transliteration</h3>
+            <p>
+                An AI-based project concept designed
+                to display transliterations of
+                street signs.
+            </p>
+            <div class="tags">
+                Artificial Intelligence | NLP
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CERTIFICATIONS -->
+
+<section id="certifications">
+
+    <h2 class="heading">My Certifications</h2>
+
+    <div class="skills-container">
+
+        <div class="card">
+            <h3>Microsoft Azure Fundamentals</h3>
+
+            <p>
+                Microsoft AZ-900 Certification
+            </p>
+
+            <div class="tags">
+                Microsoft Azure | Cloud Computing
+            </div>
+
+            <p style="margin-top: 12px;">
+                Exam Score: 985/1000
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<a href="#certifications">Certifications</a>
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2 class="heading">Contact Me</h2>
+
+    <p>
+        Email:
+        <a href="mailto:th.aarshit.1718@gmail.com">
+            th.aarshit.1718@gmail.com
+        </a>
+    </p>
+
+    <p>
+        Phone: 7590009000
+    </p>
+
+    <p>
+        GitHub:
+        <a href="https://github.com/arshit7" target="_blank">
+            github.com/arshit7
+        </a>
+    </p>
+
+    <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/arshit-thakur-4b03b537b"
+           target="_blank">
+            Arshit Thakur
+        </a>
+    </p>
+
+</section>
+
+<footer>
+
+    <p>
+        © 2026 Arshit Thakur | All Rights Reserved.
+    </p>
+
+</footer>
+
+<script>
+
+console.log("Welcome to Arshit's Portfolio!");
+
+document.querySelectorAll("nav a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        console.log("Navigating to " + link.innerText);
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
