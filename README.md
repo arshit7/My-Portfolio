@@ -1,4 +1,4 @@
-# Arshit Thakur – Personal Portfolio
+# Arshit Thakur – Portfolio
 
 Welcome to my personal portfolio website! This website showcases my education, technical skills, projects, certifications, and contact information.
 
